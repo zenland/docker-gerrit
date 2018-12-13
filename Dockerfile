@@ -1,7 +1,5 @@
 FROM openjdk:8-jre-alpine
 
-MAINTAINER zsx <thinkernel@gmail.com>
-
 # Overridable defaults
 ENV GERRIT_HOME /var/gerrit
 ENV GERRIT_SITE ${GERRIT_HOME}/review_site
@@ -24,7 +22,7 @@ RUN curl -fSsL https://gerrit-releases.storage.googleapis.com/gerrit-${GERRIT_VE
 #COPY gerrit-${GERRIT_VERSION}.war $GERRIT_WAR
 
 #Download Plugins
-ENV PLUGIN_VERSION=bazel-stable-2.15
+ENV PLUGIN_VERSION=bazel-stable-2.16
 ENV GERRITFORGE_URL=https://gerrit-ci.gerritforge.com
 ENV GERRITFORGE_ARTIFACT_DIR=lastSuccessfulBuild/artifact/bazel-genfiles/plugins
 
